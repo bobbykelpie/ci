@@ -2,8 +2,10 @@ language: python
 install: echo "build"
 jobs:
   include:
-    - stage: test
-      script: echo "test"
+    - stage: orchestrate
+      script: echo "orchestrate"
+    - stage: pre-test
+      script: echo "pre-test"
     - stage: tag
       script: echo "tag"
     - stage: build
@@ -12,3 +14,5 @@ jobs:
       script: echo "pillar"
     - stage: deploy
       script: echo "deploy"
+    - stage: post-test
+      script: echo "post-test"
