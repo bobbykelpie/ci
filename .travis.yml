@@ -4,7 +4,7 @@ env:
   - TEST_SUITE=test-integration
   - TEST_SUITE=test-ui-1
   - TEST_SUITE=test-ui-2
-install: make build
+install: echo build
 jobs:
   include:
     - stage: test
