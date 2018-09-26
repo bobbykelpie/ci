@@ -1,0 +1,19 @@
+language: python
+env:
+  - TEST_SUITE=test-unit
+  - TEST_SUITE=test-integration
+  - TEST_SUITE=test-ui-1
+  - TEST_SUITE=test-ui-2
+install: make build
+jobs:
+  include:
+    - stage: test
+      script: echo $TEST_SUITE
+    - stage: tag
+      script: echo "tag"
+    - stage: build
+      script: echo "build"
+    - stage: pillar
+      script: echo "pillar"
+    - stage: deploy
+      script: echo "deploy"
