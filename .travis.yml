@@ -1,14 +1,9 @@
 language: python
-env:
-  - TEST_SUITE=test-unit
-  - TEST_SUITE=test-integration
-  - TEST_SUITE=test-ui-1
-  - TEST_SUITE=test-ui-2
-install: echo build
+install: echo "build"
 jobs:
   include:
     - stage: test
-      script: echo $TEST_SUITE
+      script: echo "test"
     - stage: tag
       script: echo "tag"
     - stage: build
